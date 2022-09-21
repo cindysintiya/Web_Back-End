@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1 _ 211110347</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Nilai UTS</td>
+            <td>
+                : <input type="number" id="uts" min="0" max="100">
+            </td>
+        </tr>
+        <tr>
+            <td>Nilai Tugas</td>
+            <td>
+                : <input type="number" id="tugas" min="0" max="100">
+            </td>
+        </tr>
+        <tr>
+            <td>Nilai UAS</td>
+            <td>
+                : <input type="number" id="uas" min="0" max="100">
+            </td>
+        </tr>
+    </table>
+
+    <button onclick="hitung()">Hitung</button>
+    <p id="huruf">Nilai Huruf :</p>
+    
+    <script>
+        function hitung() {
+            let uts = document.getElementById("uts").value
+            let tugas = document.getElementById("tugas").value
+            let uas = document.getElementById("uas").value
+            let akhir = (0.3 * uts) + (0.4 * tugas) + (0.3 * uas)
+            let huruf
+            
+            if (akhir >= 80) {
+                huruf = "A"
+            } 
+            else if (akhir >= 70){
+                huruf = "B"
+            }
+            else if (akhir >= 60){
+                huruf = "C"
+            }
+            else if (akhir >= 40){
+                huruf = "D"
+            }
+            else {
+                huruf = "E"
+            }
+
+            document.getElementById("huruf").innerText = "Nilai Huruf : " + huruf
+        }
+    </script>
+</body>
+</html>

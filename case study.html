@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study _ 211110347</title>
+</head>
+<body>
+    <h1>Punny Web</h1>
+    <p>Website akan segera dapat diakses pada 10/10/2021.</p>
+    <p id="now"></p>
+
+    <input type="email" placeholder="name@example.com" id="email"><br><br>
+
+    <button id="notif">Get Notification</button>
+
+    <script>
+        let tanggal = new Date(Date.now())
+        let harini = document.getElementById("now")
+        harini.innerHTML = "Now : " + tanggal.toLocaleDateString()
+
+        let notif = document.getElementById("notif")
+        notif.onclick = function() {
+            let email = document.getElementById("email").value
+            alert("Kami akan memberikan notifikasi ke " + email + ". Terima Kasih")
+        }
+    </script>
+</body>
+</html>
