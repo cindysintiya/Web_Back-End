@@ -16,9 +16,7 @@
 <body class="container col-4 text-center">
     <h1 class="p-5"><big>Punny Web</big></h1>
     <h3 id="artist"></h3>
-    <!-- <h5 id="songTitle" class="bg-white border rounded p-1"></h5> -->
     <textarea id="song" class="text-center form-control" oninput="cariLagu()"></textarea><br>
-    <!-- <button class="btn btn-primary m-2" id="searchSong" onclick="cariLagu()">Cari</button> -->
     <p id="songLyrics"></p>
     <span class="card-text text-muted bg-white border rounded p-1">
         Jumlah Karakter : <span id="count"></span>
@@ -44,7 +42,8 @@
             let title_content = lirik_lagu.data.songTitle
             let lyrics_content = lirik_lagu.data.songLyrics.replaceAll("\n", " <br>")
             // let count_words = lyrics_content.split(" ").length
-
+            
+            // artist.innerHTML = artist.innerHTML + artist_content
             // songTitle.innerHTML = songTitle.innerHTML + title_content
             // songLyrics.innerHTML = songLyrics.innerHTML + lyrics_content
             // count.innerHTML = count.innerHTML + count_words
