@@ -1,14 +1,37 @@
 import AuthorData from './authorData.js';
 
-let authordata = new AuthorData()
+let authorData = new AuthorData()
 
 let show = function() {
-    console.log(authordata);
-    authordata.getProfile().then(data => {
-        authordata.showProfile(data)
+    console.log(authorData);
+    authorData.getProfile().then(data => {
+        authorData.showProfile(data)
     }).catch(e => console.log(e))
 }
 show()
 
-// Sorry, we're unable to show the rest of the code cause an error occur while commiting this file.
-// We will send a notification to this repository owner and feel free to comment below about the error.
+let btnNext = document.getElementById("next")
+let btnPrev = document.getElementById("prev")
+let page = parseInt(authorData.data[35])  // page sekarang
+btnNext.onclick = function() {
+    console.log("Cindy Sintiya : Tombol next >> ditekan");
+    page++
+    btnPrev.disabled = false
+    if (page >= 993) {  // length list = 30, length url page =  933
+        page = 993
+        btnNext.disabled = true
+    } 
+    authorData.data = `https://picsum.photos/v2/list?page=${page}&limit=1`
+    show()
+}
+btnPrev.onclick = function() {
+    console.log("Cindy Sintiya : Tombol << previous ditekan");
+    page--
+    btnNext.disabled = false
+    if (page <= 1) {
+        page = 1
+        btnPrev.disabled = true
+    }
+    authorData.data = `https://picsum.photos/v2/list?page=${page}&limit=1`
+    show()
+}
