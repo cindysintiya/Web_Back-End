@@ -15,6 +15,9 @@ class AuthorData {
     showProfile(obj) {
         let author = document.getElementById("author")
         let foto = document.getElementById("gambar")
-        
-// Sorry, we're unable to show the rest of the code cause an error occur while commiting this file.
-// We will send a notification to this repository owner and feel free to comment below about the error.
+        author.innerHTML = obj[0].author
+        foto.src = obj[0].download_url
+    }
+}
+
+export default AuthorData;
