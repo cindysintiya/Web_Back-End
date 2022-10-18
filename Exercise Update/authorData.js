@@ -43,7 +43,7 @@ class AuthorData {
             this.getProfile().then(data => {
                 this.showProfile(data)
                 btnPrev.disabled = false
-                if (this.page >= 993) {  // length list = 30, length url page =  933
+                if (this.page >= 993) {  // length list = 30, length url page =  993
                     this.page = 993
                     btnNext.disabled = true
                 }
