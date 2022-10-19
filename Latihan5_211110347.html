@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>211110347</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: linear-gradient(135deg, pink, skyblue, violet);
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="container col-5 text-center py-5">
+    <h1 class="pt-5"><big>Punny Web</big></h1>
+    <p class="fs-5">Website akan segera dapat diakses lengkap pada 11/11/2021.<br><span id="now"></span></p>
+
+    <input type="email" placeholder="name@example.com" id="email" class="form-control m-2">
+    <input type="button" id="notif" class="btn btn-primary m-2" value="Get Notification">
+
+    <script src="script.js"></script>
+    <script>
+        let tanggal = new Date(Date.now())
+        let harini = document.getElementById("now")
+        harini.innerHTML = "Now : " + tanggal.toLocaleDateString()
+        document.getElementById("email").focus()
+
+        let notif = document.getElementById("notif")
+        notif.onclick = function() {
+            let email = document.getElementById("email")
+            if (email.value != "" && nilaiPort.value != "" && nilaiPort.value <= 9999) {
+                alert("Kami akan memberikan notifikasi ke " + email.value + ". Terima Kasih")
+                document.getElementById("email").focus()
+            }
+            document.getElementById("email").value = ""
+        }
+    </script>
+</body>
+</html>
