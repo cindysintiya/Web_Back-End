@@ -3,8 +3,10 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql2');
 const app = express();
 
-// parse application/json
+// parse application/ json
 app.use(bodyParser.json());
+// parse application/ form-encode
+app.use(bodyParser.urlencoded());
 
 //create database connection
 const conn = mysql.createConnection({
@@ -76,7 +78,7 @@ app.put('/api/product/:id', (req, res) => {
     let sql = "UPDATE product SET product_name='" + req.body.product_name + "', product_price=" + req.body.product_price + " WHERE product_id=" + req.params.id
     let query = conn.query(sql, (err, results) => {
         if (err) throw err
-        if (results.length === 0) {
+        if (results.affectedRows === 0) {
             res.statusCode = 404
             res.end('ID Not Found')
         }
@@ -95,11 +97,17 @@ app.delete('/api/product/:id', (req, res) => {
     let sql = "DELETE FROM product WHERE product_id=" + req.params.id
     let query = conn.query(sql, (err, results) => {
         if (err) throw err
-        res.json({
-            "status"   : res.statusCode,
-            "error"    : err,
-            "response" : "Delete Data Success"
-        })
+        if (result.affectedRows === 0) {
+            res.statusCode = 404
+            res.end('ID Not Found')
+        }
+        else {
+            res.json({
+                "status"   : res.statusCode,
+                "error"    : err,
+                "response" : "Delete data SUCCESS"
+            })
+        }
     })
 })
 
@@ -159,12 +167,37 @@ app.post('/api/comment', (req, res) => {
     })
 })
 
+// edit data comment berdasarkan comment_id
+app.put('/api/comment/:id', (req, res) => {
+    let sql = "UPDATE comment SET comment_text='" + req.body.comment_text + "' WHERE comment_id=" + req.params.id
+    let query = conn.query(sql, (err, result) => {
+        if (err) throw err
+        if (result.affectedRows === 0) {
+            res.statusCode = 404
+            res.end('ID Not Found')
+        }
+        else {
+            res.json({
+                "status" : "UPDATED"
+            })
+        }
+    })
+})
+
 // hapus data comment berdasarkan comment_id
 app.delete('/api/comment/:id', (req, res) => {
     let sql = "DELETE FROM comment WHERE comment_id=" + req.params.id
     let query = conn.query(sql, (err, results) => {
         if (err) throw err
-        res.json({"status" : "DELETED"})
+        if (result.affectedRows === 0) {
+            res.statusCode = 404
+            res.end('ID Not Found')
+        }
+        else {
+            res.json({
+                "status" : "DELETED"
+            })
+        }
     })
 })
 
