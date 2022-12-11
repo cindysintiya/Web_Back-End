@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - 211110347</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: linear-gradient(135deg, pink, skyblue, violet);
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="text-center pt-5">
+    <h1 class="text-center pt-5"><big>Punny Web</big></h1>
+    <h3 id="artist" class="pt-3 pb-2"></h3>
+    <p id="songTitle" class="container col-4 bg-light border rounded p-1"></p>
+    <p id="songLyrics" class="mb-4"></p>
+    <span class="card-text border border-secondary rounded p-2" id="count">
+        Jumlah Kata : 
+    </span>
+    <script>
+        // TIDAK BOLEH DIUBAH
+        let lirik_lagu = {
+            status : true, 
+            data   : {
+                artist     : "Westlife", 
+                songTitle  : "I Have A Dream", 
+                songLyrics : "I have a dream, a song to sing\nTo help me cope with anything\nIf you see the wonder (wonder) of a fairy tale\nYou can take the future even if you fail"
+            }
+        }
+
+        let artist = document.getElementById("artist")
+        let songTitle = document.getElementById("songTitle")
+        let songLyrics = document.getElementById("songLyrics")
+        let count = document.getElementById("count")
+
+        let artist_content = lirik_lagu.data.artist
+        let title_content = lirik_lagu.data.songTitle
+        let lyrics_content = lirik_lagu.data.songLyrics.replaceAll("\n", " <br>")
+        let count_words = lyrics_content.split(" ").length
+
+        artist.innerHTML = artist.innerHTML + artist_content
+        songTitle.innerHTML = songTitle.innerHTML + title_content
+        songLyrics.innerHTML = songLyrics.innerHTML + lyrics_content
+        count.innerHTML = count.innerHTML + count_words
+    </script>
+</body>
+</html>
