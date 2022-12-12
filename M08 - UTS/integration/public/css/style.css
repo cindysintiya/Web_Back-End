@@ -1,0 +1,39 @@
+body {
+    background-image: linear-gradient(135deg, skyblue, violet, pink, #FEE5E0);
+    background-attachment: fixed;
+}
+.imgposter {
+    display: block;
+    width: 215px;
+    height: 215px;
+    object-fit: cover;
+}
+.poster {
+    display: block;
+    width: 180px;
+    object-fit: cover;
+}
+.overflow {
+    white-space: nowrap;
+    max-width: 168px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.m-minus {
+    margin-top: -5px;
+}
+.iconfa {
+    color: #FEE5E0;
+}
+.iconfa:hover {
+    color: gray;
+}
+.bg-pink {
+    background-color: #FEE5E0;
+}
+.text-pink {
+    color: #FEE5E0;
+}
+.flex-175 {
+    width: 175px;
+}

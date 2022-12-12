@@ -1,0 +1,17 @@
+Nama Tim : CiViC
+Anggota  : 211110347 - Cindy Sintiya
+	     211110515 - Victoria Beatrice
+
+Link folder video :
+https://mikroskilacid-my.sharepoint.com/:f:/g/personal/211110347_students_mikroskil_ac_id/ElUdldvHICVBout-YvOAZsgBd08xdybC5SBGlRZ1HTB_HA?e=GIp1KW
+
+Link video :
+Front End   : https://mikroskilacid-my.sharepoint.com/:v:/g/personal/211110347_students_mikroskil_ac_id/ETojBPnDBvRKlVl8QPdNKnMBd4OyFpCUJHZZ_3Hp7q6ZHQ?e=lQha0u
+Back End    : https://mikroskilacid-my.sharepoint.com/:v:/g/personal/211110347_students_mikroskil_ac_id/EXdxj0xZqm5MnMMAYyd7XQsBxeCVK9QvS-ivECVUiVomiA?e=gb3WxX
+Integration : https://mikroskilacid-my.sharepoint.com/:v:/g/personal/211110347_students_mikroskil_ac_id/ETtm5yUEPqtOk31oLmAtkx4BgLYxuVC5o2z6YVIRVUiTEQ?e=2co24F
+
+Note :
+- Untuk tampilan UI Design, Front-End tetap menggunakan tampilan sesuai permintaan soal, dan Integration menggunakan tampilan baru yang sesuai untuk tampilan desktop.
+- Untuk Front-End dan Integration, saat kursor diarahkan ke image-poster, movie-title, movie-tagline, dan tombol next kekanan (>), maka akan muncul title berupa judul movie (karena ada beberapa judul yang terlalu panjang dan akan terpotong), namun di video tidak terlihat titlenya tapi sebenarnya ada.
+- Warna background (Front-End dan Integration) yang digunakan merupakan gabungan dari warna kedua anggota tim, yaitu blue, violet, pink (Cindy) dan digabungkan dengan warna #FEE5E0 (Victoria)
+- Untuk Backend, saat melakukan request PUT, data id akan benar-benar diubah/ diupdate di bagian data tmdbMovies.json, dan request DELETE benar-benar menghapus data dengan id yang dituju.

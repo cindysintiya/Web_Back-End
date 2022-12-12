@@ -1,0 +1,21 @@
+{
+  "name": "integration",
+  "version": "1.0.0",
+  "description": "uts_integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "routing",
+    "nodejs",
+    "native", 
+    "express"
+  ],
+  "type": "module",
+  "author": "cinnamondys",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
