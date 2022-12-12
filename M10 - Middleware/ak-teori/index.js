@@ -97,7 +97,7 @@ app.all("*", (req, res) => {
 
 app.use(errorHandler)
 
-// Server Listening
+// Server listening
 app.listen(347, () => {
     console.log(`Server started on localhost:347`);
 })
