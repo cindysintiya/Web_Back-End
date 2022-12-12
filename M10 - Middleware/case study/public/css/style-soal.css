@@ -1,0 +1,71 @@
+@font-face {
+    font-family: Marhey;
+    src: url(../assets/Marhey/Marhey-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: NerkoOne;
+    src: url(../assets/Nerko_One/NerkoOne-Regular.ttf);
+}
+@font-face {
+    font-family: RubikMonoOne;
+    src: url(../assets/Rubik_Mono_One/RubikMonoOne-Regular.ttf);
+}
+@font-face {
+    font-family: TitanOne;
+    src: url(../assets/Titan_One/TitanOne-Regular.ttf);
+}
+body {
+    background-color: #9CC2D5;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+}
+.marhey {
+    font-family: Marhey;
+}
+.nerkoone {
+    font-family: NerkoOne;
+}
+.rubikmono {
+    font-family: RubikMonoOne;
+}
+.titanone {
+    font-family: TitanOne;
+}
+.fc-white {
+    color: white;
+}
+
+/* about */
+h2.fc-white {
+    margin-top: 150px;
+    font-size: 70px;
+}
+h3.fc-white {
+    font-size: 60px;
+}
+
+/* user */
+header.bg-header {
+    background-color: #0063B1;
+    padding: 0 30px;
+}
+header.container {
+    display: grid;
+    grid-template-columns: 777px auto auto auto;
+    text-align: left;
+    vertical-align: middle;
+}
+header h3{
+    margin-top: 25px;
+}
+header h3 a {
+    text-decoration: none;
+    color: white;
+}
+h4.fc-white {
+    font-size: 40px;
+}
+img {
+    margin-bottom: -60px;
+}

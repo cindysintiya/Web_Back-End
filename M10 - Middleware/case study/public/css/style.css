@@ -1,0 +1,98 @@
+@font-face {
+    font-family: Marhey;
+    src: url(../assets/fonts/Marhey/Marhey-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: NerkoOne;
+    src: url(../assets/fonts/Nerko_One/NerkoOne-Regular.ttf);
+}
+@font-face {
+    font-family: RubikMonoOne;
+    src: url(../assets/fonts/Rubik_Mono_One/RubikMonoOne-Regular.ttf);
+}
+@font-face {
+    font-family: TitanOne;
+    src: url(../assets/fonts/Titan_One/TitanOne-Regular.ttf);
+}
+body {
+    background-image: linear-gradient(135deg, pink, skyblue, violet);
+    background-attachment: fixed;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+}
+.marhey {
+    font-family: Marhey;
+}
+.nerkoone {
+    font-family: NerkoOne;
+}
+.rubikmono {
+    font-family: RubikMonoOne;
+}
+.titanone {
+    font-family: TitanOne;
+}
+.fc-white {
+    color: white;
+}
+
+/* header */
+header.bg-header {
+    background-color: rgba(255, 255, 255, 0.55) !important;
+    box-shadow: inset 3px 3px 20px white;
+    padding: 0 30px;
+}
+header.container {
+    display: grid;
+    grid-template-columns: 70% auto auto auto;
+    text-align: left;
+    vertical-align: middle;
+}
+header h3 {
+    margin-top: 25px;
+    margin-right: 10px;
+    text-align: right;
+}
+header h3 a {
+    text-decoration: none;
+    color: black;
+}
+
+/* about */
+.fs-70 {
+    margin-top: 150px;
+    font-size: 70px;
+}
+.fs-60 {
+    font-size: 60px;
+}
+
+/* user */
+.fs-40 {
+    font-size: 40px;
+}
+img {
+    margin-bottom: -60px;
+}
+
+/* unknown */
+input, button a {
+    height: 30px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+}
+button {
+    height: max-content;
+    padding: 2px 15px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.55) !important;
+    box-shadow: inset 3px 3px 20px white;
+}
+input, button {
+    border-radius: 5px;
+    border: 0px;
+}
