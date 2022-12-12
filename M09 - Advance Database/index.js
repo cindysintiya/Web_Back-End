@@ -202,7 +202,7 @@ app.delete('/api/comment/:id', (req, res) => {
     })
 })
 
-// Server listening
+// Server Listening
 app.listen(347, () => {
     console.log("Server started at localhost:347");
 })
