@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREATE Products - 211110347</title>
+    <link rel="stylesheet" href="https://www.unpkg.com/bulma@0.9.3/css/bulma.css">
+    <style>
+        html {
+            background-image: linear-gradient(135deg, pink, skyblue, violet);
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" class="container is-max-desktop mt-5">
+        <h1 class="title">Add Product</h1>
+        <div class="field">
+            <label class="label">Product Name</label>
+            <div class="control">
+                <input type="text" placeholder="Product Name" class="input" name="name" id="name" autofocus>
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Product Price</label>
+            <div class="control">
+                <input type="text" placeholder="Product Price" class="input" name="price" id="price">
+            </div>
+        </div>
+        <div class="control">
+            <button class="button is-success" id="save">SAVE</button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://bulmajs.tomerbe.co.uk/assets/bulmajs/0.10/dist/bulma.js"></script>
+    <script>
+        document.getElementById('save').onclick = () => {
+            axios({
+                method: 'post', 
+                url: '/admin/product/api/products', 
+                data: {
+                    name  : document.getElementById("name").value.trim(), 
+                    price : document.getElementById("price").value.trim()
+                }
+            }).then((result) => {
+                if (document.getElementById("name").value.trim() == "" || document.getElementById("price").value.trim() == "" || document.getElementById("price").value <= 0 || isNaN(document.getElementById("price").value)) {
+                    Bulma.create('alert', {
+                        type: 'danger',
+                        title: 'Oh ow...',
+                        body: 'Data GAGAL ditambahkan..!',
+                        closable: true,
+                        confirm: {
+                            label: 'Back to Home',
+                            classes: ['is-primary'],
+                            onClick: function() {
+                                window.location = "/admin/product"
+                            },
+                        },
+                        cancel: {
+                            label: 'Create Again',
+                            classes: ['is-danger', 'is-outlined']
+                        }
+                    })
+                    // alert('Info status: Data GAGAL ditambahkan')
+                }
+                else {
+                    Bulma.create('alert', {
+                        type: 'success',
+                        title: 'Info status: ' + result.status,
+                        body: 'Great, Data BERHASIL ditambahkan!',
+                        confirm: {
+                            label: 'Okay!',
+                            classes: ['is-outlined', 'columns', 'column', 'is-2', 'is-offset-5'],
+                            onClick: function() {
+                                window.location = "/admin/product"
+                            },
+                        },
+                    })
+                    // alert('Info status: ' + result.status)
+                }
+                // alert('Info status: ' + result.status)
+                // window.location = "/admin/product";
+            }).catch((err) => {
+                alert('error ' + err)
+            });
+        }
+    </script>
+</body>
+</html>
