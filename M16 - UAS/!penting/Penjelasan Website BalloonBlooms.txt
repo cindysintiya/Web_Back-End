@@ -1,0 +1,48 @@
+Kelompok 	: CiViC
+Anggota  	: 211110347 (Cindy Sintiya)
+ 	     	  211110515 (Victoria Beatrice)
+
+Tema 		: Website E-Commerce (BalloonBlooms)
+Penjelasan	: 
+Website BalloonBlooms yang dibuat oleh tim CiViC merupakan website pembelanjaan online (E-Commerce) di bidang jual-beli hampers. 
+Pelanggan tidak hanya dapat membeli balloon hampers, tetapi juga dapat mengkustomisasi hampersnya sesuai dengan keinginan pelanggan untuk dihadiahkan kepada teman atau seseorang yang spesial bagi pelanggan tersebut. 
+Hal menarik dalam website BalloonBlooms ini yaitu pelanggan juga dapat me-request untuk menambahkan sketch wajah potrait atau foto tertentu yang dibuat secara hand-made kepada orang yang ingin dihadiahi pelanggan di hari spesialnya, seperti hari ulang tahun, anniversary, wisuda, valentine, dan hari spesial lainnya. 
+Di dalam website BalloonBlooms tersedia fitur yang dapat digunakan untuk memudahkan proses penjualan, pengorderan, ataupun pembelian hampers secara online. Pelanggan juga dapat meninggalkan komentar ataupun bertanya secara langsung (live) kepada penjual melalui fitur LiveChat yang tersedia, baik secara publik maupun privat dengan penjual (admin).
+Sebagai tambahan, terdapat pembagian hak otorisasi dalam hal pengaksesan fitur berdasarkan jenis user ( guest, user, admin ) yang mengunjungi website BalloonBlooms.
+Website ini kami bangun sedemikian rupa agar bisa "menyamai" website/ aplikasi E-Commerce yang ada.
+
+
+Fitur web yang dikembangkan:
+- Fitur navigasi web 
+- Fitur login dan sign up 
+- Fitur logout dari akun 
+- Fitur melihat semua produk yang tersedia
+- Fitur pencarian produk
+- Fitur melihat wishlist pengguna (User)
+- Fitur menyukai maupun membatalkan pemberian like pada produk (User)
+- Fitur melihat komentar produk
+- Fitur pemberian komentar pada produk (User & Admin)
+- Fitur menghapus komentar yang dikirim pengguna itu sendiri (User & Admin)
+- Fitur mengkustomisasi produk yang akan dipesan (User)
+- Fitur melihat orderan yang dipesan pengguna tersebut (User)
+- Fitur membatalkan orderan yang baru dipesan (User & Admin)
+- Fitur melihat detail orderan yang dibatalkan, dalam proses maupun sudah selesai dikerjakan (User)
+- Fitur melihat seluruh orderan yang masuk (Admin)
+- Fitur meng-update status orderan (Admin)
+- Fitur menambah, memperbaiki, maupun menghapus untuk sementara dan secara permanen pada produk (Admin)
+- Fitur memposting kembali produk yang sudah dihapus sementara (Admin)
+- Fitur melihat semua list akun user beserta Adminnya sendiri (Admin)
+- Fitur mengubah posisi user ke Admin dan sebaliknya (Admin)
+- Fitur menghapus akun user di list user (Admin)
+- Fitur quick link pada bagian footer ke halaman yang diinginkan
+- Fitur melihat halaman about - semua terkait BalloonBlooms
+- Fitur komunikasi secara real-time dengan Admin diruangan Public
+- Fitur private chat dengan Admin 
+- Fitur pemberitahuan Admin sedang online-offline, /aktif tidaknya Admin ruangan livechat 
+- Fitur perpindahan ruangan chat
+- Fitur halaman hak akses khusus (Forbidden)
+- Fitur halaman tidak ditemukan (Page Not Found)
+
+NOTE :
+- Import terlebih dahulu data dummy mysql dalam folder !sql kedalam database/ schema dengan filename : bb_civic
+- Yang perlu diinstal (npm install) : nodemon express mysql2 ejs sequelize express-session multer moment socket.io
